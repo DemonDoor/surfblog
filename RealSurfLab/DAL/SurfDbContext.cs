@@ -12,7 +12,9 @@ namespace RealSurfLab.DAL
         }
 
         public SurfDbContext() : base("RealSurfDatabase")
-        { }
+        {
+
+        }
 
         public DbSet<User> Users { get; set; }
 

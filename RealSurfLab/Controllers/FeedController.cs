@@ -26,7 +26,7 @@ namespace RealSurfLab.Controllers
         public ActionResult AddPost(Post model, HttpPostedFileBase imageData)
         {
 
-            if (imageData == null || model.Text == null)
+            if (imageData == null && model.Text == null)
             {
                 ModelState.AddModelError(string.Empty, "Не загружено изображение или отсутствует текст");
                 var postsInDb = dbContext.Posts.OrderByDescending(c => c.Id).ToList();
